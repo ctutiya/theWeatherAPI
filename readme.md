@@ -8,4 +8,4 @@ I used Figma to wireframe the project. Here is the link: https://www.figma.com/f
 
 ## Author
 
-* **Carlos Tutiya** - [GitHub](https://github.com/ctutiya){:target="_blank"}
+* **Carlos Tutiya** - [GitHub](https://github.com/ctutiya)
