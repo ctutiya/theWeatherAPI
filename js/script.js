@@ -45,15 +45,6 @@ $(document).ready(() => {
             fillPanelDaily(data2, unitTemp)
             fillPanelAlert(data2)
 
-            // const response3 = await fetch(`https://tile.openweathermap.org/map/temp_new/3/-20/20.png?appid=${apiKey}`)
-            // console.log(response3)
-
-            // // check for response status
-            // if (response3.status != 200) throw Error(`${response3.status}: ${response3.statusText}`)
-
-            // let data3 = await response3.json()
-            // console.log(data3)
-
             selectedCity = cityID
         }
         catch(err) {
@@ -185,7 +176,6 @@ ${dailyForecast}
     }
 
     const fillPanelAlert = data => {
-        console.log(data)
         // clear the container
         $('.alert-column').html('')
 
@@ -276,6 +266,4 @@ ${dailyForecast}
             else showWeather(selectedCity, metricID)
         }
     })
-
-    $('#btn-reset').click(e => showWeather())
 });
