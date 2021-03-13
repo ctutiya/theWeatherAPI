@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=RocknRoll+One&display=swap');
+
+@import 'reset';
+@import 'variables';
+@import 'navbar';
+
+/* Typograph */
+
+body {
+    font-family: $primary-font;
+    color: $primary-text-color;
+    background-image: url('https://s1.twnmm.com/images/en_ca/backgrounds/unified/default.jpg');
+    background-color: $primary-bg-color;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+h3 {
+    margin-bottom: 30px;
+    font-size: 34px;
+    font-weight: 600;
+    text-align: center;
+    color: $primary-color;
+}
+
+h4 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: $primary-text-color;
+    text-decoration: none;
+
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Colors */
+
+.primary-color {
+    color: $primary-color;
+}
+
+.secondary-color {
+    color: $secondary-color;
+}
+
+.primary-bg-color {
+    background-color: $primary-bg-color;
+}
+
+.secondary-bg-color {
+    background-color: $secondary-bg-color;
+}
+
+.terciary-bg-color {
+    background-color: $terciary-bg-color;
+}
+
+/* Forms */
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $form-text-color;
+    opacity: .7; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $form-text-color;
+    opacity: .7;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: $form-text-color;
+    opacity: .7;
+}
+
+input {
+    width: 100%;
+    padding: 3px;
+    font-size: 18px;
+    color: $form-text-color;
+    background-color: transparent;
+    border: 1px solid $form-border-color;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    line-height: 34px;
+    padding: 3px;
+}
+
+.btn-submit {
+    height: 40px;
+    font-weight: 700;
+    color: $form-text-white-color;
+    background-color: $primary-color;
+    border-color: $primary-color;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+}
+
+.btn-outline-secondary:focus{
+    box-shadow: 0 0 0 0.15rem rgba(108, 117, 125, 0.5);
+}
+
+/* Header */
+
+header {
+    .navbar-buttons-container {
+        .lnk-search {
+            cursor: pointer;
+        }
+
+        @media (max-width: 991px) {
+            flex-direction: column;
+        }
+    }
+
+    form {
+
+        .form-control,
+        .form-select {
+            border-color: $form-border-white-color;
+        }
+    }
+
+    .form-search {
+        min-width: 450px;
+
+        button {
+            color: $secondary-text-color;
+            background-color: $quaternary-bg-color;
+            border-color: $quaternary-bg-color;
+        }
+    }
+}
+
+/* Main */
+
+.main {
+    padding-top: 61px;
+}
+
+.sec-advertisment {
+    padding: 28px 0;
+}
+
+.sec-main {
+    padding: 0 0 46px;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    .content, .sidebar {
+        .row {
+            margin-bottom: 24px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .sidebar {
+        max-width: 364px;
+    }
+
+    .column-container {
+        padding: 20px;
+        background-color: $secondary-bg-color;
+        border-radius: 5px;
+        box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.20);
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .main-column {
+        .column-container {
+            color: $secondary-text-color;
+            background-color: hsla(0, 0%, 100%, .1);
+
+            p {
+                &.date-time {
+                    font-size: 16px;
+                }
+    
+                &.temperature {
+                    line-height: 100px;
+                    font-size: 82px;
+                }
+    
+                &.description, &.temp-min-max {
+                    font-size: 22px;
+                    font-weight: 600;
+                }
+            }
+
+            .column-content {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .detail-column {
+        .column-container {
+            p {
+                &.temperature {
+                    font-size: 50px;
+                }
+
+                &.feels-like {
+                    font-size: 12px;
+                }
+            }
+
+            .column-content-text-period {
+                margin-top: 30px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .period-item {
+                    width: 23%;
+                }
+            }
+
+            .column-content-text-detail {
+                margin-top: 30px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .detail-item {
+                    width: 48%;
+                    padding: 10px 0;
+                    border-top: 1px solid $secondary-color;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+
+    .daily-column {
+        .column-container {
+            p {
+                &.temperature {
+                    font-size: 22px;
+                }
+
+                &.description {
+                    font-size: 14px;
+                }
+            }
+
+            .column-content-text-forecast {
+                margin-top: 30px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .forecast-item {
+                    width: 18%;
+                }
+            }
+        }
+    }
+
+    .alert-column {
+        .column-container {
+            .column-content-text {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+/* Footer */
+
+footer {
+    padding: 15px 0;
+    text-align: center;
+    color: $secondary-text-color;
+
+    p {
+        line-height: 18px;
+        font-size: 14px;
+        color: $footer-link-color;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    span {
+        color: $footer-link-color;
+    }
+
+    a {
+        color: $footer-link-color;
+
+        &:hover {
+            color: $footer-link-color-hover;
+        }
+
+        &.lnk-bold {
+            font-weight: 700;
+        }
+    }
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (max-width: 1024px) {
+  
+  /* CSS */
+  
+}
+
+@media (max-width: 991px) {
+    .sec-main {
+        .content {
+            margin-bottom: 24px;
+            flex: 0 0 100%;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    header {
+        .form-search {
+            min-width: 350px;
+        }
+    }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+*/
+
+@media (max-width: 767px) {
+    header {
+        .form-search {
+            min-width: 250px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    header {
+        .form-search {
+            min-width: unset;
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    header {
+        .navbar > .container-fluid {
+            justify-content: center;
+        }
+
+        .form-search {
+            width: 90%;
+            margin: 10px 0 15px;
+        }
+    }
+
+    .main {
+        padding-top: 147px;
+    }
+
+    .sec-main {
+        .detail-column {
+            .column-container {
+                p {
+                    &.temperature {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+
+        .daily-column {
+            .column-container {
+                p {
+                    &.temperature {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+*/
+
+@media (max-width: 480px) {
+    .sec-main {
+        .detail-column {
+            .column-container {
+                .column-content-text-period {
+                    .period-item {
+                        width: 48%;
+
+                        &:first-child {
+                            margin-bottom: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .daily-column {
+            .column-container {
+                .column-content-text-forecast {
+                    .forecast-item {
+                        width: 48%;
+
+                        &:first-child {
+                            width: 100%;
+                            margin-bottom: 24px;
+                        }
+
+                        &:nth-child(2) {
+                            margin-bottom: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .sec-main {
+        .detail-column {
+            .column-container {
+                .column-content-text-detail {
+                    .detail-item {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 363px) {
+    .sec-main {
+        .sidebar {
+            flex: 0 0 100%;
+        }
+    }
+}

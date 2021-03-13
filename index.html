@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Weather API</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+
+        <script src="https://kit.fontawesome.com/c8b2e356d4.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-light terciary-bg-color">
+                <div class="container-fluid">
+                    <a class="navbar-brand">The Weather API</a>
+
+                    <form class="d-flex form-search">
+                        <div class="input-group">
+                            <input id="txt-search" type="text" class="form-control form-control-sm" placeholder="search for location" aria-label="search" aria-describedby="">
+                            <button id="btn-search" class="btn btn-outline-secondary btn-sm" type="button"><i class="fa fa-search"></i></button>
+                          </div>                        
+                    </form>
+
+                    <form class="d-flex">
+                        <select id="sel-metric" class="form-select form-select-sm" aria-label="">
+                            <option value="0">Select metric</option>
+                            <option value="metric" selected>&deg;C, m/s</option>
+                            <option value="imperial">&deg;F, mph</option>
+                        </select>
+                  </form>
+                </div>
+              </nav>
+        </header>
+
+        <div class="main">
+            <section class="sec-advertisment">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <img src="https://s0.2mdn.net/8015881/TELGH9448_Q121_HS_WholeHome_Bundle_Updates_Digital_IAB_728x90_vf.jpg" alt="" />
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section class="sec-main">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col content">
+                            <div class="row">
+                                <div class="col-12 main-column"></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 detail-column"></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 daily-column"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto sidebar">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="column-container">
+                                        <img src="https://tpc.googlesyndication.com/simgad/3485860487660447482" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 alert-column"></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="column-container">
+                                        <img src="https://media.bidr.io/districtm/64/226/2576_buttandco_st-vpat2021_300x250.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2021 The Weather API. Powered by <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a></p>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+nav {
+    position: fixed !important;
+    width: 100%;
+    padding: 15px 0 !important;
+    box-shadow: 0px 5px 5px #00000029;
+    transition: 0.5s;
+    z-index: 2;
+
+    .navbar-brand {
+        margin-right: 0;
+        font-family: 'RocknRoll One', sans-serif;
+        color: $secondary-text-color !important;
+        /* display: flex;
+        align-items: center; */
+    }
+
+    .navbar-toggler {
+        &:focus {
+            box-shadow: 0 0 0 0.05rem;
+
+        }
+    }
+
+    .navbar-nav {
+        .nav-link {
+            color: $primary-color !important;
+        }
+
+        .dropdown-header {
+            font-size: 16px;
+            font-weight: 700;
+            color: $primary-color !important;
+        }
+
+        .dropdown-item {
+            color: $primary-color !important;
+        }
+    }
+
+    .navbar-buttons-container {
+        .lnk-search {
+            color: $primary-color !important;
+        }
+    }
+
+    &.navbar.fixed-top {
+        transform: translateY(-100%);
+        top: -100%;
+
+        &.visible {
+            transform: translateY(0);
+            top: 0;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .navbar-nav {
+            .dropdown-menu {
+                background-color: transparent;
+                border-color: transparent;
+            }
+        }
+
+        /* .navbar-buttons-container {
+            .navbar-search {
+                margin-bottom: 8px;
+            }
+
+            .navbar-buttons {
+                justify-content: center;
+
+                .btn-outline-success {
+                    margin-left: 0;
+                }
+            }
+        } */
+    }
+}
